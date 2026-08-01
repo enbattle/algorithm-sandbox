@@ -65,7 +65,7 @@ function findRandomWeightedIndexCSLS(weights, randomVal) {
  * 
  * @param {*} weights - list of numbers that represent each item's probability of being chosen
  * @param {*} randomVal - random value generated between [0 and 1) using Math.random()
- * @returns 
+ * @returns index of the weight (which corresponds to the item) from the main part of the PSBS algorithm
  */
 function findRandomWeightedIndexPSBSHelper(weights, randomVal) {
 	let currentThreshold = 0;
@@ -86,7 +86,8 @@ function findRandomWeightedIndexPSBSHelper(weights, randomVal) {
  * 							value is greater than the threshold)
  * @param {*} start - current starting index in array
  * @param {*} end - current ending index in array
- * @returns 
+ * @returns index of the weight (which corresponds to the item)
+ * 
  */
 function findRandomWeightedIndexPSBS(thresholds, targetValue, start=0, end=thresholds.length) {
 	// base case
