@@ -1,0 +1,19 @@
+[project]
+name = "mcp-server-example"
+version = "0.1.0"
+description = "A basic local MCP server example: a knowledge-base tool, resource and prompt, plus basket tools showing application-owned state."
+readme = "README.md"
+authors = [
+    { name = "Steven Li", email = "37815626+enbattle@users.noreply.github.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "mcp[cli]>=2.3.0",
+]
+
+[project.scripts]
+mcp-server-example = "mcp_server_example.server:main"
+
+[build-system]
+requires = ["uv_build>=0.13.0,<0.14.0"]
+build-backend = "uv_build"
